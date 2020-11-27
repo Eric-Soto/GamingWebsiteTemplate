@@ -1,0 +1,87 @@
+html body{
+    padding: 0;
+    margin:0;
+}
+
+:root{
+    --green: #8FBF00;
+    --white: #FFFFFF;
+    --black: #363636;
+    --whiteText: #F5F6F6;
+}
+
+.heading{
+    grid-area: heading;
+    background-color: var(--white);
+    display: grid;
+    grid-template-rows: 40px 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "topListContainer"
+    "gamingCreatorsHead";
+}
+
+.topListContainer{
+    background-color: var(--green);
+    grid-area: topListContainer;
+    
+}
+.helpContact{
+    background-color: var(--green);
+    color: var(--whiteText);
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    
+}
+
+.topList, a:link, a:visited {
+    text-decoration: none;
+}
+
+.topList, a{
+    color: var(--whiteText);
+    list-style: none;
+}
+.topList, a:hover{
+    color: var(--black);
+}
+
+.gamingCreatorsHead{
+    background-color: var(--white);
+    color: var(--black);
+    grid-area: gamingCreatorsHead;
+}
+.slides{
+    grid-area: slides;
+    background-color: var(--black);
+}
+
+.newGames{
+    grid-area: newGames;
+    background-color: var(--white);
+}
+
+.news{
+    grid-area: news;
+    background-color: var(--white);
+}
+
+.footing{
+    grid-area: footing;
+    background: var(--white);
+}
+
+.bodyGrid{
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100vh;
+    width: 100vw;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: 
+    "heading"
+    "slides"
+    "newGames"
+    "news"
+    "footing";
+}
